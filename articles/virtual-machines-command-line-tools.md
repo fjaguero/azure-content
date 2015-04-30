@@ -356,7 +356,9 @@ This command creates a virtual machine endpoint. You may also use -u or --enable
 
 **vm endpoint create-multiple [options] &lt;vm-name> &lt;lb-port>[:&lt;vm-port>[:&lt;protocol>[:&lt;enable-direct-server-return>[:&lt;lb-set-name>[:&lt;probe-protocol>[:&lt;probe-port>[:&lt;probe-path>[:&lt;internal-lb-name>]]]]]]]] {1-*}**
 
-Create multiple vm endpoints.
+Create multiple vm endpoints. Use commas to separate each endpoint.
+
+	~$ azure vm endpoint create-multiple my-vm 8888:8080,8450:8443
 
 **vm endpoint delete &lt;vm-name> &lt;lb-port>**
 
